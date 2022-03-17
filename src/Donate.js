@@ -51,9 +51,9 @@ export const Donate = () => {
                                     </div>
                                     <div className="flex-grow">
                                         <p className="leading-relaxed text-base">If you can contribute as a teacher that can make a difference in the life of a child and their community, join now. </p>
-                                        <a className="mt-3 text-gray-100 inline-flex items-center bg-emerald-500 rounded-lg px-3 py-2 cursor-pointer hover:bg-emerald-700">Join
+                                        <Link to="/donate/volunteer" className="mt-3 text-gray-100 inline-flex items-center bg-emerald-500 rounded-lg px-3 py-2 cursor-pointer hover:bg-emerald-700">Join
                                             <i className="fad fa-arrow-right ml-2 mt-1"></i>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

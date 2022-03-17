@@ -6,7 +6,7 @@ export const Writtencontent = () => {
             <div className="mission bg-neutral-900">
                 <div className="container mx-auto items-center px-10 py-20 text-center">
                     <h1 className="text-center pb-3">OUR MISSION</h1>
-                    <p className="text-gray-100 text-md">At Teach For India, we believe leadership for education is the solution. We are building a movement of leaders who will eliminate educational inequity in India.</p>
+                    <p className="text-gray-100 text-md">At XcitEducation, we believe leadership for education is the solution. We are building a movement of leaders who will eliminate educational inequity in India.</p>
                 </div>
             </div>
             <svg className="svg-black mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316 51" data-reactid="253"><polygon points="158 51 0 0 316 0 158 51" fill="#171717" data-reactid="254"></polygon></svg>
@@ -25,7 +25,7 @@ export const Writtencontent = () => {
                 <svg className="svg-blue-img mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316 51" data-reactid="262"><polygon points="158 51 0 0 316 0 158 51" fill="#9d0000" data-reactid="263"></polygon></svg>
                 <div className="container mx-auto items-center px-10 pb-16 text-center sm:flex-col flex-col" >
                     <h1 className="text-center pb-3">THE FELLOWSHIP</h1>
-                    <p className="text-gray-100 text-md">The Teach For India Fellowship is an opportunity for India’s brightest and most promising youth, from the nation’s best universities and workplaces, to serve as full-time teachers to children from low-income communities in under-resourced schools. Through two years of teaching and working with key education stakeholders, our Fellows are exposed to the grassroots realities of India’s education system and cultivate the knowledge, skills, and mindsets needed to attain positions of leadership in and beyond education, working collectively to build a vibrant movement for educational equity across India.</p>
+                    <p className="text-gray-100 text-md">The XcitEducation Fellowship is an opportunity for India’s brightest and most promising youth, from the nation’s best universities and workplaces, to serve as full-time teachers to children from low-income communities in under-resourced schools. Through two years of teaching and working with key education stakeholders, our Fellows are exposed to the grassroots realities of India’s education system and cultivate the knowledge, skills, and mindsets needed to attain positions of leadership in and beyond education, working collectively to build a vibrant movement for educational equity across India.</p>
                     <div className="flex flex-wrap md:text-center text-center order-first mt-8">
                         <div className="lg:w-1/1 md:w-1/1 w-full">
                             <button className="py-3 px-4 md:py-4 lg:py-3">LEARN ABOUT FELLOWSHIP</button>
@@ -36,7 +36,7 @@ export const Writtencontent = () => {
             <div className="alumni">
                 <div className="container mx-auto items-center px-10 py-20 text-center">
                     <h1 className="text-center pb-3">THE ALUMNI MOVEMENT</h1>
-                    <p className="text-gray-100 text-md">Today, the Teach For India Alumni community is 3400+ members strong, impacting 1 million children directly and reaching 33 million children indirectly.</p>
+                    <p className="text-gray-100 text-md">Today, the XcitEducation Alumni community is 3400+ members strong, impacting 1 million children directly and reaching 33 million children indirectly.</p>
                 </div>
             </div>
             <svg className="svg-white mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316 51" data-reactid="262"><polygon points="158 51 0 0 316 0 158 51" fill="#9d0000" data-reactid="263"></polygon></svg>

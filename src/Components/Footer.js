@@ -29,7 +29,7 @@ export const Footer = () => {
                 </div>
                 <div className="bg-gray-100">
                     <div className="container mx-auto flex items-center sm:flex-col flex-col">
-                        <p className="text-sm text-gray-400 sm:mx-auto sm:mt-0 ">©XcitEducation Foundations</p>
+                        <p className="text-sm text-gray-400 sm:mx-auto sm:mt-0 ">©XcitEducation</p>
                         <div className="socials inline-flex sm:ml-auto sm:mt-0 mt-4 sm:mx-auto justify-center sm:justify-start pt-4 pb-10">
                             <a target="_blank" href="https://www.facebook.com" className="text-gray-500 cursor-pointer hover:text-blue-500">
                                 <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

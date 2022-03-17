@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "axios"
 
-export const Donateitdev = () => {
+export const Volunteer = () => {
     const [formdata, setFormdata] = useState(
         {
             name: "",
@@ -11,8 +11,6 @@ export const Donateitdev = () => {
             city: "",
             state: "",
             zip: "",
-            device: "",
-            devicedesc: "", devicepic: ""
         }
     )
     let name, value
@@ -31,37 +29,17 @@ export const Donateitdev = () => {
         }
     }
 
-    const [loading, setLoading] = useState(false)
-    const [image, setImage] = useState("")
-
-    const uploadImage = async (e) => {
-        const files = e.target.files
-        const data = new FormData()
-        data.append('file', files[0])
-        data.append('upload_preset', "deviceimages")
-        setLoading(true)
-
-        const res = await fetch("https://api.cloudinary.com/v1_1/dqf4iqhxc/image/upload",
-            {
-                method: 'POST',
-                body: data
-            })
-        const file = await res.json()
-        setFormdata({ ...formdata, devicepic: file.secure_url })
-    }
-
+    useEffect(() => {
+        const scrollPos = () => {
+          window.scrollTo(0, 0);
+        }
+        scrollPos()
+      }, [])
     return (
-        <div className="donateitdev">
-            <div className="img carousel-inner relative w-full overflow-hidden">
-                <div className="carousel-item active relative mx-auto w-auto">
-                    <img src="https://thumbs.dreamstime.com/b/donation-concept-electronic-devices-isolated-white-background-desktop-computer-tablet-smartphone-screen-digital-162229878.jpg" className="block w-full" alt="..." />
-                    <div className="carousel-caption hidden md:block absolute text-center">
-                    </div>
-                </div>
-            </div>
+        <div className="volunteer">
             <div className="flex flex-col text-center w-full mt-4">
-                <h2 className="heading text-3xl text-sky-500 tracking-widest font-bold title-font mb-1  text-2xl">DONATE IT DEVICES</h2>
-                <p className="text-xl">If you have a working/non-working Computer,Laptop or Smartphone, then fill the form below.</p>
+                <h2 className="heading text-3xl mt-4 text-sky-500 tracking-widest font-bold title-font mb-1  text-2xl">BE A TEACHER</h2>
+                <p className="text-xl px-2">If you can contribute as a teacher that can make a difference in the life of a child and their community, then fill the form below.</p>
             </div>
             <div className='form px-4'>
                 <div className="container my-10 mx-auto lg:w-1/2 px-4 bg-gray-200 rounded-lg py-3">
@@ -144,33 +122,6 @@ export const Donateitdev = () => {
                             <input value={formdata.zip} name="zip" onChange={handleInputs} className="appearance-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 outline-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="grid-zip" type="number" />
                         </div>
                     </div>
-
-                    <div className="mt-4 inline-block relative lg:w-2/6 sm:w-2/4">
-                        <label className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300">Select device</label>
-
-                        <select value={formdata.device} name="device" onChange={handleInputs} className="appearance-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 outline-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option>Computer</option>
-                            <option>Laptop</option>
-                            <option>Smartphone</option>
-                            <option>Tablet</option>
-                            <option>Monitor</option>
-                            <option>Keyboard/Mouse</option>
-                            <option>Speaker</option>
-                            <option>Projector</option>
-                            <option>Webcam</option>
-                            <option>Speaker</option>
-                            <option>Other</option>
-                        </select>
-                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 mt-6 text-gray-700">
-                            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
-                        </div>
-                    </div>
-
-                    <label htmlFor="condition" className="block mb-1 mt-4 text-sm font-medium text-gray-900 dark:text-gray-400">Describe the condition of the device</label>
-                    <textarea value={formdata.devicedesc} name="devicedesc" onChange={handleInputs} id="condition" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 outline-sky-500 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
-
-                    <label className="block mb-1 mt-4 text-sm font-medium text-gray-900 dark:text-gray-300" htmlFor="user_avatar">Upload picture of the device</label>
-                    <input type="file" name="file" onChange={uploadImage} className="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 p-2.5 focus:outline-none focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" />
 
                     <button type="button" onClick={sendData} className="mt-4 text-white bg-emerald-500 hover:bg-emerald-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">SEND</button>
 

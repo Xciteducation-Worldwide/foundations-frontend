@@ -26,6 +26,7 @@ export const Monetarydonation = () => {
       city: "",
       state: "",
       zip: "",
+      amount: ""
     }
   )
   let name, value
@@ -41,9 +42,7 @@ export const Monetarydonation = () => {
       alert("Razorpay SDK failed to load.Are you Online ?")
       return
     }
-    const data = await fetch('http://localhost:8000/razorpay', { method: 'POST' }).then((t) =>
-      t.json()
-    )
+    const { data } = await axios.post('http://localhost:8000/razorpay/', { email: monetaryformdata.email })
 
 
     const setRazorpayData = async (razorpay_payment_id,
@@ -57,7 +56,7 @@ export const Monetarydonation = () => {
           razorpay_order_id,
           razorpay_signature
         })
-    
+
       } catch (error) {
         console.log(error.message);
       }
@@ -73,7 +72,7 @@ export const Monetarydonation = () => {
       "image": { logo },
       "order_id": data.id,
       "handler": function (response) {
-        setRazorpayData(response.razorpay_payment_id,response.razorpay_order_id,response.razorpay_signature)
+        setRazorpayData(response.razorpay_payment_id, response.razorpay_order_id, response.razorpay_signature)
       },
       "prefill": {
         "name": "Aman Kumar",
@@ -86,7 +85,7 @@ export const Monetarydonation = () => {
   const sendData = async () => {
     try {
       const res = await axios.post("http://localhost:8000/getmonetaryformdata", monetaryformdata)
-     
+
       localStorage.setItem("userId", res.data.data._id);
       displayRazorpay();
     } catch (error) {
@@ -96,13 +95,13 @@ export const Monetarydonation = () => {
 
   }
 
-useEffect(()=>{
+  useEffect(() => {
 
-  const scrollPos = () => {
-    window.scrollTo(0, 0);
-  }
-  scrollPos()
-},[])
+    const scrollPos = () => {
+      window.scrollTo(0, 0);
+    }
+    scrollPos()
+  }, [])
 
   return (
     <div className="monetarydonation">
@@ -190,6 +189,13 @@ useEffect(()=>{
               <label htmlFor="email" className="block mb-1 mt-4 text-sm font-medium text-gray-900 dark:text-gray-300">Zip</label>
               <input value={monetaryformdata.zip} name="zip" onChange={handleInputs} className="appearance-none bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 outline-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="grid-zip" type="number" />
             </div>
+          </div>
+          <label className="block mb-1 mt-4 text-sm font-medium text-gray-900 dark:text-gray-300">Amount</label>
+          <div className="relative w-full md:w-1/3 lg:pr-4 mb-6 md:mb-0">
+            <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+              <i className="fas fa-rupee-sign text-sky-900"></i>
+            </div>
+            <input value={monetaryformdata.amount} name="amount" onChange={handleInputs} id="name" className="pl-8 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2.5 outline-sky-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="number" />
           </div>
           <button type="button" onClick={sendData} className="mt-4 text-white bg-emerald-500 hover:bg-emerald-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">SEND</button>
 
