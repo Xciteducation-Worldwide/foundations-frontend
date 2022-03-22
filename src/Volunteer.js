@@ -22,7 +22,7 @@ export const Volunteer = () => {
     const sendData = async () => {
         console.log(formdata)
         try {
-            const res = await axios.post("http://localhost:8000/getFormData", formdata)
+            const res = await axios.post("http://localhost:8000/setVolunteerFormData", formdata)
             console.log(res.data);
         } catch (error) {
             console.log(error);

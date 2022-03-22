@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&family=Fredoka:wght@500&family=Poppins:wght@300;400&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Jost&family=Fredoka:wght@500&family=Poppins:wght@400;500;600;700&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.navbar{
-  color:#ffffff;
-  font-family: 'Jost', sans-serif;
+.navbar {
+  color: #ffffff;
+  font-family: "Jost", sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
   font-weight: bolder;
-  background-color:#9d0000;
+  background-color: #9d0000;
 }
-.navbar .nav-logo{
+.navbar .nav-logo {
   display: none;
 }
-.carousel-inner{
+.carousel-inner {
   max-height: 100vh;
 }
 
-.apply-btn{
+.apply-btn {
   background-color: #fff459;
   position: absolute;
   display: flex;
@@ -29,230 +29,262 @@
   right: 1rem;
   z-index: 1;
   padding: 0.5rem 1rem;
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
   letter-spacing: 1px;
   word-spacing: 5px;
 }
-
-.writtencontent h1{
+.writtencontent h1 {
   font-size: 1.4rem;
   color: #9d0000;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.crisis , .alumni{
-  background-color:#9d0000;
+.crisis,
+.alumni {
+  background-color: #9d0000;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.fellow{
+.fellow {
   background-image: url("./Images/fellowshipbg.jpg");
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.crisis h1, .alumni h1{
-  background-color:#9d0000;
-  color:rgb(22, 22, 22);
-  font-family: 'Poppins', sans-serif;
+.crisis h1,
+.alumni h1 {
+  background-color: #9d0000;
+  color: rgb(22, 22, 22);
+  font-family: "Poppins", sans-serif;
 }
-.crisis p{
-  background-color:#9d0000;
-  color:#ffffff;
-  font-family: 'Poppins', sans-serif;
+.crisis p {
+  background-color: #9d0000;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
-.join p{
+.join p {
   color: #252727;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.join .btns button ,.writtencontent .fellow button{
+.join .btns button,
+.writtencontent .fellow button {
   color: #9d0000;
   border: 2px solid #9d0000;
   border-radius: 10px;
   transition: 0.4s all;
 }
-.join .btns button ,.writtencontent .crisis button{
+.join .btns button,
+.writtencontent .crisis button {
   color: white;
   border: 2px solid white;
   border-radius: 10px;
   transition: 0.4s all;
 }
-.join .btns button ,.writtencontent .crisis .lm-btn:hover{
+.join .btns button,
+.writtencontent .crisis .lm-btn:hover {
   color: #9d0000;
   background-color: white;
 }
-.join .btns button{
+.join .btns button {
   background-color: white;
   color: #9d0000;
   border: 2px solid #9d0000;
 }
-.join .btns button:hover{
+.join .btns button:hover {
   background-color: #9d0000;
   color: white;
 }
 
-.writtencontent .fellow button:hover{
+.writtencontent .fellow button:hover {
   background-color: #9d0000;
   color: white;
 }
 
 .writtencontent .svg-black {
-  padding:  95px 43vw;
+  padding: 95px 43vw;
   padding-top: 0;
-  background-color:#9d0000;
+  background-color: #9d0000;
 }
 
 .writtencontent .svg-blue-img {
-  padding:95px 43vw;
+  padding: 95px 43vw;
   padding-top: 0;
 }
 .writtencontent .svg-blue {
-  padding:95px 43vw;
+  padding: 95px 43vw;
   padding-top: 0;
   transform-origin: 0px 0px;
-  background-color:#1F2937;
+  background-color: #1f2937;
 }
 .writtencontent .svg-white {
-  padding:95px 43vw;
+  padding: 95px 43vw;
   padding-top: 0;
-  background-color:transparent;
+  background-color: transparent;
 }
-.footer .title-font{
+.footer .title-font {
   font-size: 0.8rem;
 }
-.modal-bg{
+.modal-bg {
   height: 100vh;
-  background-color: #1F2937;
+  background-color: #1f2937;
 }
-.modal-box{
-  background-color: #1F2937;
+.modal-box {
+  background-color: #1f2937;
   height: 100vh;
   width: 80vw;
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   position: fixed;
   z-index: 10;
 }
 
-.modal-close i{
+.modal-close i {
   font-size: 2rem;
   font-weight: 100;
   color: white;
 }
-.donate .onimg-text{
+.donate .onimg-text {
   text-shadow: 2px 2px #000000;
   color: aliceblue;
   letter-spacing: 2px;
   font-family: cursive;
 }
-.donate{
-  font-family: 'Poppins', sans-serif;
+.donate {
+  font-family: "Poppins", sans-serif;
 }
-.donate h2{
+.donate h2 {
   font-weight: bolder;
 }
-.donate .heading{
+.donate .heading {
   color: #9d0000;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing:0;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0;
 }
-.donate button{
+.donate button {
   text-shadow: 2px 2px #000000;
 }
-.donate img{
-  height:50vh;
+.donate img {
+  height: 50vh;
   object-fit: cover;
 }
 
-.donate svg{
+.donate svg {
   stroke: #9d0000;
 }
-.donateitdev{
-  font-family: 'Poppins', sans-serif;
+.donateitdev {
+  font-family: "Poppins", sans-serif;
 }
-.donateitdev .heading{
-  font-family: 'Poppins', sans-serif;
+.donateitdev .heading {
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0;
 }
-.donateitdev .img{
+.donateitdev .img {
   background-color: transparent;
 }
-.donateitdev img{
+.donateitdev img {
   width: 100vw;
   height: 70vh;
-  object-fit:contain;
+  object-fit: contain;
 }
-.apply label,.apply input{
-  font-family: 'Poppins', sans-serif;
-  font-weight:500;
+.apply label,
+.apply input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
-@media screen and (min-width: 801px) { 
-  .navbar .nav2{
+.admin h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.admin p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #0b2889;
+}
+.admin p span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #3c4251;
+}
+.admin button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.adminlogin .h3,
+.adminlogin label,
+.adminlogin input,
+.adminlogin button {
+  font-family: "Poppins", sans-serif;
+}
+.adminlogin .h3 {
+  font-weight: bold;
+}
+@media screen and (min-width: 801px) {
+  .navbar .nav2 {
     display: none;
   }
 }
 
 @media screen and (max-width: 800px) {
-  .navbar .nav1{
+  .navbar .nav1 {
     display: none;
-  } 
-  .socials{
-    margin-bottom:4rem;
   }
-  
-  .carousel-inner img{
+  .socials {
+    margin-bottom: 4rem;
+  }
+
+  .carousel-inner img {
     height: 84vh;
     object-fit: cover;
   }
-  .donate .carousel-inner img{
+  .donate .carousel-inner img {
     position: relative;
     height: 80vh;
     object-fit: cover;
   }
-  .navbar .nav2{
+  .navbar .nav2 {
     position: absolute;
     bottom: 0;
     position: fixed;
-    background-color: #1F2937;
-    z-index: 1;
+    background-color: #1f2937;
+    z-index: 10;
   }
-  .navbar .nav-logo{
-    display:block;
+  .navbar .nav-logo {
+    display: block;
   }
-  .navbar a{
+  .navbar a {
     margin-left: 0;
   }
-  .navbar .nav2 a{
+  .navbar .nav2 a {
     font-size: 1rem;
   }
-  
+
   .writtencontent .svg-black {
-    padding:  95px 33vw;
+    padding: 95px 33vw;
     padding-top: 0;
     background-color: #9d0000;
   }
   .writtencontent .svg-blue {
-    padding:95px 33vw;
+    padding: 95px 33vw;
     padding-top: 0;
-    background-color:#FFFFFF;
+    background-color: #ffffff;
   }
   .writtencontent .svg-white {
-    padding:95px 33vw;
-    padding-top:0;
-    background-color:white;
+    padding: 95px 33vw;
+    padding-top: 0;
+    background-color: white;
   }
   .writtencontent .svg-blue-img {
-    padding:95px 33vw;
+    padding: 95px 33vw;
     padding-top: 0;
   }
-  .apply-btn{
-   display: none;
+  .apply-btn {
+    display: none;
   }
 }
 
 @media screen and (min-width: 260px) {
-  .navbar .nav2 .a{
+  .navbar .nav2 .a {
     font-size: 1rem;
-    margin:0 0.5rem;
+    margin: 0 0.5rem;
   }
 }
